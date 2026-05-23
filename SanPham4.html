@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/SanPham.css">
+</head>
+<body>
+<div class="container py-5">
+    <!-- CHI TIẾT -->
+    <div class="detail-box">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <img src="./img/kinhte2.png" class="product-img">
+            </div>
+            <div class="col-lg-7">
+                <h1 class="product-title">Think And Grow Rich</h1><br>
+                <h3>📚 Tác giả: Napoleon Hill</h3>
+                <h3>🏷 Thể loại: Kinh tế - Phát triển bản thân</h3>
+                <h3>🌟 Bí quyết thành công vượt thời gian</h3><br>
+                <div class="price-box">
+                    <span class="new-price">126.000đ</span>
+                    <span class="old-price">140.000đ</span>
+                    <span class="sale">-10%</span>
+                </div>
+                <!-- SỐ LƯỢNG -->
+                <div class="quantity-box">
+                    <button class="quantity-btn" onclick="decreaseQty()">-</button>
+                    <input type="text" value="1" id="qty" class="quantity-input">
+                    <button class="quantity-btn" onclick="increaseQty()">+</button>
+                </div>
+                <!-- NÚT -->
+                <div class="button-group">
+                    <button class="cart-btn" onclick="addToCart('Think And Grow Rich',126000,'./img/kinhte2.png')">
+                        🛒 Thêm vào giỏ hàng
+                    </button>
+                    <button class="buy-btn" onclick="buyNow('Think And Grow Rich',126000,'./img/kinhte2.png')">
+                        ⚡ Mua ngay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MÔ TẢ -->
+    <div class="desc-box">
+        <h3>📖 Mô tả sản phẩm</h3>
+        <p>
+            Think And Grow Rich – tác phẩm kinh điển của Napoleon Hill được xem là một trong những cuốn sách có ảnh hưởng lớn nhất về thành công và phát triển bản thân. Cuốn sách tổng hợp những nguyên tắc và bí quyết thành công từ hàng trăm doanh nhân, nhà lãnh đạo và người thành đạt.
+        </p>
+        <p>
+            Với lối viết giản dị nhưng sâu sắc, Napoleon Hill đã chỉ ra rằng thành công bắt nguồn từ niềm tin, khát vọng và sự kiên trì. Những bài học trong sách không chỉ áp dụng cho việc làm giàu mà còn cho mọi lĩnh vực của cuộc sống.
+        </p>
+        <p>
+            Đây là cuốn sách vượt thời gian, truyền cảm hứng cho nhiều thế hệ độc giả khẳng định rằng “tư duy chính là tài sản lớn nhất của con người”. Một tác phẩm không thể thiếu cho những ai khao khát chạm đến đỉnh cao thành công.
+        </p>
+    </div>
+    <!-- ĐÁNH GIÁ -->
+    <div class="review-box">
+        <h3>⭐ Đánh giá sản phẩm</h3>
+        <div class="star-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+        </div>
+        <input type="file">
+        <textarea placeholder="Nhập bình luận của bạn..."></textarea>
+        <br>
+        <button class="send-review">Gửi bình luận</button>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="./js/SanPham.js"></script>
+
+</body>
+</html>

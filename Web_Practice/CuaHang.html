@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">
+                <img src="./img/logo.png" alt="Logo">
+            </a>
+            <!-- Button mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="menu">
+                <form class="d-flex mx-auto w-50">
+                <input id="searchInput" class="form-control rounded-0 rounded-start" type="search" placeholder="Tìm kiếm...">
+                <button class="btn btn-dark rounded-0 rounded-end"><i class="bi bi-search"></i></button>
+                </form>
+                <!-- Right -->
+                <div class="d-flex align-items-center gap-3">
+                    <div>
+                        👤 <span id="userName"></span>
+                        <a href="DangNhap.html">
+                            <button class="btn btn-primary btn-sm" id="loginBtn"> Đăng nhập </button>
+                        </a>
+                        <button class="btn btn-danger btn-sm" id="logoutBtn" style="display:none;" onclick="logout()"> Đăng xuất </button>
+                    </div>
+                    <a href="GioHang.html" class="btn btn-warning"> 🛒 Giỏ hàng </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- BANNER -->
+    <div class="banner">
+        <img src="./img/banner_sach.png" alt="">
+    </div>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid px-4">
+            <ul class="navbar-nav w-100 justify-content-between align-items-center">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        ☰ Danh mục sản phẩm
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Tiểu thuyết / Văn học</a></li>
+                        <li><a class="dropdown-item" href="#">Kinh tế - Khởi nghiệp</a></li>
+                        <li><a class="dropdown-item" href="#">Tâm lý - Kỹ năng</a></li>
+                        <li><a class="dropdown-item" href="#">Thiếu nhi</a></li>
+                        <li><a class="dropdown-item" href="#">Giáo khoa – Giáo trình</a></li>
+                        <li><a class="dropdown-item" href="#">Manga - Truyện tranh</a></li>
+                        <li><a class="dropdown-item" href="#">Ngoại ngữ</a></li>
+                        <li><a class="dropdown-item" href="#">Trinh thám</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="CuaHang.html">Cửa hàng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="DichVu.html">Dịch vụ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ThongTin.html">Thông tin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="LienHe.html">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="LabThucHanh.html">Lab Thực Hành</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container py-5">
+    <div class="row g-4">
+        <!-- KHUNG 1 -->
+        <div class="col-lg-6">
+            <div class="category-box">
+                <h3>Tiểu thuyết - Văn học</h3>
+                <!-- SẢN PHẨM -->
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/vanhoc1.png">
+                        <div class="hover-overlay">
+                            <a href="SanPham1.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                        <span class="sale">-10%</span>
+                    </div>
+                    <div class="product-info">
+                        <h5>Truyện Kiều</h5>
+                        <p>Văn học cổ điển</p>
+                        <div class="price-box">
+                            <span class="old-price">120.000đ</span>
+                            <span class="new-price">108.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Truyện Kiều',108000,'./img/vanhoc1.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Truyện Kiều',108000,'./img/vanhoc1.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- SẢN PHẨM 2 -->
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/vanhoc2.png">
+                        <div class="hover-overlay">
+                            <a href="SanPham2.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>Tắt Đèn</h5>
+                        <p>Văn học hiện thực</p>
+                        <div class="price-box">
+                            <span class="new-price">90.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Tắt Đèn',90000,'./img/vanhoc2.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Tắt Đèn',90000,'./img/vanhoc2.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- KHUNG 2 -->
+        <div class="col-lg-6">
+            <div class="category-box">
+                <h3>Kinh tế - Khởi nghiệp</h3>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/kinhte1.png">
+                        <div class="hover-overlay">
+                            <a href="SanPham3.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>Cha Giàu Cha Nghèo</h5>
+                        <p>Tài chính - Đầu tư</p>
+                        <div class="price-box">
+                            <span class="new-price">150.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Cha Giàu Cha Nghèo',150000,'./img/kinhte1.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Cha Giàu Cha Nghèo',150000,'./img/kinhte1.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/kinhte2.png">
+                        <div class="hover-overlay">
+                            <a href="SanPham4.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                        <span class="sale">-10%</span>
+                    </div>
+                    <div class="product-info">
+                        <h5>Think And Grow Rich</h5>
+                        <p>Kinh doanh</p>
+                        <div class="price-box">
+                            <span class="old-price">140.000đ</span>
+                            <span class="new-price">126.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Think And Grow Rich',126000,'./img/kinhte2.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Think And Grow Rich',126000,'./img/kinhte2.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- KHUNG 3 -->
+        <div class="col-lg-6">
+            <div class="category-box">
+                <h3>Tâm lý - Kỹ năng</h3>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/kynang1.png">
+                        <div class="hover-overlay">
+                            <a href="SanPham5.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                        <span class="sale">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <h5>Đắc Nhân Tâm</h5>
+                        <p>Phát triển bản thân</p>
+                        <div class="price-box">
+                            <span class="old-price">150.000đ</span>
+                            <span class="new-price">120.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Đắc Nhân Tâm',120000,'./img/kynang1.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Đắc Nhân Tâm',120000,'./img/kynang1.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/kynang2.png">
+                        <div class="hover-overlay">
+                            <a href="SanPham6.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>Atomic Habits</h5>
+                        <p>Thói quen</p>
+                        <div class="price-box">
+                            <span class="new-price">150.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Atomic Habits',150000,'./img/kynang2.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Atomic Habits',150000,'./img/kynang2.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- KHUNG 4 -->
+        <div class="col-lg-6">
+            <div class="category-box">
+                <h3>Manga - Truyện tranh</h3>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/manga1.png">
+                        <div class="hover-overlay">
+                            <a href="SanPham7.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>One Piece</h5>
+                        <p>Phiêu lưu - Hành động</p>
+                        <div class="price-box">
+                            <span class="new-price">68.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('One Piece',68000,'./img/manga1.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('One Piece',68000,'./img/manga1.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/manga2.png">
+                        <div class="hover-overlay">
+                            <a href="SanPham8.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>Naruto</h5>
+                        <p>Ninja - Hành động</p>
+                        <div class="price-box">
+                            <span class="new-price">70.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Naruto',70000,'./img/manga2.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Naruto',70000,'./img/manga2.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- KHUNG 5 -->
+        <div class="col-lg-6">
+            <div class="category-box">
+                <h3>Thiếu nhi</h3>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/thieunhi1.png">
+                        <div class="hover-overlay">
+                            <a href="SanPham9.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>Doraemon</h5>
+                        <p>Truyện tranh thiếu nhi</p>
+                        <div class="price-box">
+                            <span class="new-price">25.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Doraemon',25000,'./img/thieunhi1.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Doraemon',25000,'./img/thieunhi1.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/thieunhi2.png">
+                        <div class="hover-overlay">
+                            <a href="SanPham10.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>Shin Cậu Bé Bút Chì</h5>
+                        <p>Hài hước - Thiếu nhi</p>
+                        <div class="price-box">
+                            <span class="new-price">30.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Shin Cậu Bé Bút Chì',30000,'./img/thieunhi2.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Shin Cậu Bé Bút Chì',30000,'./img/thieunhi2.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- KHUNG 6 -->
+        <div class="col-lg-6">
+            <div class="category-box">
+                <h3>Giáo khoa - Giáo trình</h3>
+                    <div class="mini-product">
+                        <div class="product-img">
+                            <img src="img/gt1.png">
+                            <div class="hover-overlay">
+                                <a href="SanPham11.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                            </div>
+                        </div>
+                    <div class="product-info">
+                        <h5>Tin Học Đại Cương</h5>
+                        <p>Công nghệ thông tin</p>
+                        <div class="price-box">
+                            <span class="new-price">110.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Tin Học Đại Cương',110000,'./img/gt1.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Tin Học Đại Cương',110000,'./img/gt1.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/gt2.png">
+                        <div class="hover-overlay">
+                            <a href="SanPham12.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>Giải Tích I</h5>
+                        <p>Toán học</p>
+                        <div class="price-box">
+                            <span class="new-price">120.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Giải Tích I',120000,'./img/gt2.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Giải Tích I',120000,'./img/manga1.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- KHUNG 7 -->
+        <div class="col-lg-6">
+            <div class="category-box">
+                <h3>Ngoại ngữ</h3>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/nn1.png">
+                        <div class="hover-overlay">
+                            <a href="./SanPham13.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>English Grammar</h5>
+                        <p>Ngữ pháp tiếng Anh</p>
+                        <div class="price-box">
+                            <span class="new-price">120.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('English Grammar',120000,'./img/nn1.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('English Grammar',120000,'./img/nn1.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/nn2.png">
+                        <div class="hover-overlay">
+                            <a href="./SanPham14.html">
+                            <   button class="btn btn-light">👁 Xem thêm</>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>Từ Vựng IELTS</h5>
+                        <p>Luyện thi IELTS</p>
+                        <div class="price-box">
+                            <span class="new-price">150.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Từ Vựng IELTS',150000,'./img/nn2.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Từ Vựng IELTS',150000,'./img/nn2.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- KHUNG 8 -->
+        <div class="col-lg-6">
+            <div class="category-box">
+                <h3>Trinh thám</h3>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/tt1.png">
+                        <div class="hover-overlay">
+                            <a href="./SanPham15.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>Conan</h5>
+                        <p>Trinh thám - Manga</p>
+                        <div class="price-box">
+                            <span class="new-price">75.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Conan',75000,'./img/tt1.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Conan',75000,'./img/tt1.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/tt2.png">
+                        <div class="hover-overlay">
+                            <a href="./SanPham16.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>Sherlock Holmes</h5>
+                        <p>Trinh thám cổ điển</p>
+                        <div class="price-box">
+                            <span class="new-price">120.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Sherlock Holmes',120000,'./img/tt2.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Sherlock Holmes',120000,'./img/tt2.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- KHUNG 9 -->
+        <div class="col-lg-6">
+            <div class="category-box">
+                <h3>Tiểu thuyết</h3>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/ttt1.png">
+                        <div class="hover-overlay">
+                            <a href="./SanPham17.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                        <span class="sale">-10%</span>
+                    </div>
+                    <div class="product-info">
+                        <h5>Tuổi Trẻ Đáng Giá Bao Nhiêu ?</h5>
+                        <p>Truyền cảm hứng</p>
+                        <div class="price-box">
+                            <span class="old-price">110.000đ</span>
+                            <span class="new-price">99.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Tuổi Trẻ Đáng Giá Bao Nhiêu ?',99000,'./img/ttt1.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Tuổi Trẻ Đáng Giá Bao Nhiêu ?',99000,'./img/ttt1.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-product">
+                    <div class="product-img">
+                        <img src="img/ttt2.png">
+                        <div class="hover-overlay">
+                            <a href="./SanPham18.html">
+                                <button class="btn btn-light">👁 Xem thêm</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h5>Harry Potter</h5>
+                        <p>Fantasy - Phiêu lưu</p>
+                        <div class="price-box">
+                            <span class="new-price">200.000đ</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="btn btn-danger" onclick="buyNow('Harry Potter',200000,'./img/ttt2.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Harry Potter',200000,'./img/ttt2.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+</body>
+</html>

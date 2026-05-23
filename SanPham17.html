@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/SanPham.css">
+</head>
+<body>
+<div class="container py-5">
+    <!-- CHI TIẾT -->
+    <div class="detail-box">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <img src="./img/ttt1.png" class="product-img">
+            </div>
+            <div class="col-lg-7">
+                <h1 class="product-title">Tuổi Trẻ Đáng Giá Bao Nhiêu ?</h1><br>
+                <h3>📚 Tác giả: Rosie Nguyễn</h3>
+                <h3>🏷 Thể loại: Kỹ năng sống - Phát triển bản thân</h3>
+                <h3>🌱 Hành trình tuổi trẻ ý nghĩa</h3><br>
+                <div class="price-box">
+                    <span class="new-price">99.000đ</span>
+                    <span class="old-price">110.000đ</span>
+                    <span class="sale">-10%</span>
+                </div>
+                <!-- SỐ LƯỢNG -->
+                <div class="quantity-box">
+                    <button class="quantity-btn" onclick="decreaseQty()">-</button>
+                    <input type="text" value="1" id="qty" class="quantity-input">
+                    <button class="quantity-btn" onclick="increaseQty()">+</button>
+                </div>
+                <!-- NÚT -->
+                <div class="button-group">
+                    <button class="cart-btn" onclick="addToCart('Tuổi Trẻ Đáng Giá Bao Nhiêu ?',99000,'./img/ttt1.png')">
+                        🛒 Thêm vào giỏ hàng
+                    </button>
+                    <button class="buy-btn" onclick="buyNow('Tuổi Trẻ Đáng Giá Bao Nhiêu ?',99000,'./img/ttt1.png')">
+                        ⚡ Mua ngay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MÔ TẢ -->
+    <div class="desc-box">
+        <h3>📖 Mô tả sản phẩm</h3>
+        <p>
+            Tuổi Trẻ Đáng Giá Bao Nhiêu? – cuốn sách truyền cảm hứng của Rosie Nguyễn dành cho những người trẻ đang tìm kiếm định hướng và ý nghĩa trong cuộc sống. Tác phẩm là lời nhắn nhủ về việc sống hết mình và tận dụng quãng thời gian quý giá.
+        </p>
+        <p>
+            Với giọng văn gần gũi chân thành, tác giả chia sẻ những trải nghiệm thực tế, bài học về học tập, làm việc, du lịch và phát triển bản thân giúp người đọc nhận ra giá trị của tuổi trẻ và cách biến nó thành hành trang vững chắc cho tương lai.
+        </p>
+        <p>
+            Đây là cuốn sách không chỉ để đọc mà còn để suy ngẫm và hành động.  Tuổi Trẻ Đáng Giá Bao Nhiêu? là người bạn đồng hành cho bất kỳ ai muốn sống một tuổi trẻ rực rỡ, đầy trải nghiệm và ý nghĩa.
+        </p>
+    </div>
+    <!-- ĐÁNH GIÁ -->
+    <div class="review-box">
+        <h3>⭐ Đánh giá sản phẩm</h3>
+        <div class="star-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+        </div>
+        <input type="file">
+        <textarea placeholder="Nhập bình luận của bạn..."></textarea>
+        <br>
+        <button class="send-review">Gửi bình luận</button>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="./js/SanPham.js"></script>
+
+</body>
+</html>

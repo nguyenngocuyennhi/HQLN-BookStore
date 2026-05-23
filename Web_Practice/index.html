@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">
+                <img src="img/logo.png" alt="Logo">
+            </a>
+            <!-- Button mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="menu">
+                <form class="d-flex mx-auto w-50">
+                <input id="searchInput" class="form-control rounded-0 rounded-start" type="search" placeholder="Tìm kiếm...">
+                <button class="btn btn-dark rounded-0 rounded-end"><i class="bi bi-search"></i></button>
+                </form>
+                <!-- Right -->
+                <div class="d-flex align-items-center gap-3">
+                    <div>
+                        👤 <span id="userName"></span>
+                        <a href="DangNhap.html">
+                            <button class="btn btn-primary btn-sm" id="loginBtn"> Đăng nhập </button>
+                        </a>
+                        <button class="btn btn-danger btn-sm" id="logoutBtn" style="display:none;" onclick="logout()"> Đăng xuất </button>
+                    </div>
+                    <a href="GioHang.html" class="btn btn-warning"> 🛒 Giỏ hàng </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- BANNER -->
+    <div class="banner">
+        <img src="./img/banner_sach.png" alt="">
+    </div>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid px-4">
+            <ul class="navbar-nav w-100 justify-content-between align-items-center">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        ☰ Danh mục sản phẩm
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Tiểu thuyết / Văn học</a></li>
+                        <li><a class="dropdown-item" href="#">Kinh tế - Khởi nghiệp</a></li>
+                        <li><a class="dropdown-item" href="#">Tâm lý - Kỹ năng</a></li>
+                        <li><a class="dropdown-item" href="#">Thiếu nhi</a></li>
+                        <li><a class="dropdown-item" href="#">Giáo khoa – Giáo trình</a></li>
+                        <li><a class="dropdown-item" href="#">Manga - Truyện tranh</a></li>
+                        <li><a class="dropdown-item" href="#">Ngoại ngữ</a></li>
+                        <li><a class="dropdown-item" href="#">Trinh thám</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CuaHang.html">Cửa hàng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="DichVu.html">Dịch vụ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ThongTin.html">Thông tin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="LienHe.html">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="LabThucHanh.html">Lab Thực Hành</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- CONTENT -->
+    <div class="container py-5">
+        <!-- PRODUCT -->
+        <h2 class="text-center mb-4">SẢN PHẨM BÁN CHẠY</h2>
+        <div class="row g-4">
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm product-card">
+                    <a href="SanPhamBC1.html">
+                        <img src="img/Sach1.png" class="card-img-top">
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title"> Tư duy nhanh và chậm </h5>
+                        <p class="card-text">
+                            Thể loại: Tâm lý học, Phát triển bản thân
+                        </p>
+                        <h5 class="text-danger"> 230.000đ </h5>
+                        <div class="mt-auto d-grid gap-2">
+                            <button class="btn btn-danger" onclick="buyNow('Tư duy nhanh và chậm',230000,'img/Sach1.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Tư duy nhanh và chậm',230000,'img/Sach1.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm product-card">
+                    <a href="SanPhamBC2.html">
+                        <img src="img/Sach2.png" class="card-img-top">
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                        <h5>Demon Slayer</h5>
+                        <p>
+                            Thể loại: Action, Fantasy, Anime
+                        </p>
+                        <h5 class="text-danger"> 120.000đ </h5>
+                        <div class="mt-auto d-grid gap-2">
+                            <button class="btn btn-danger" onclick="buyNow('Demon Slayer',120000,'img/Sach2.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Demon Slayer',120000,'img/Sach2.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm product-card">
+                    <a href="SanPhamBC3.html">
+                        <img src="img/Sach3.png" class="card-img-top">
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                        <h5>Con đường tơ lụa</h5>
+                        <p>
+                            Thể loại: Trinh thám, Suy luận
+                        </p>
+                        <h5 class="text-danger"> 115.000đ </h5>
+                        <div class="mt-auto d-grid gap-2">
+                            <button class="btn btn-danger" onclick="buyNow('Con đường tơ lụa',115000,'img/Sach3.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Con đường tơ lụa',115000,'img/Sach3.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 shadow-sm product-card">
+                    <a href="SanPhamBC4.html">
+                        <img src="img/Sach4.png" class="card-img-top">
+                    </a>
+                    <div class="card-body d-flex flex-column">
+                        <h5>Từ điển bách khoa Việt Nam</h5>
+                        <p>
+                            Thể loại: Khoa học, Bách khoa
+                        </p>
+                        <h5 class="text-danger"> 2.980.000đ </h5>
+                        <div class="mt-auto d-grid gap-2">
+                            <button class="btn btn-danger" onclick="buyNow('Từ điển bách khoa Việt Nam',2980000,'img/Sach4.png')">
+                                ⚡ Mua ngay
+                            </button>
+                            <button class="btn btn-warning" onclick="addToCart('Từ điển bách khoa Việt Nam',2980000,'img/Sach4.png')">
+                                🛒 Giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CATEGORY -->
+        <h2 class="text-center mt-5 mb-4"> DANH MỤC NỔI BẬT </h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card cat-item shadow-sm">
+                    <img src="img/Nhom1.png">
+                    <div class="card-body text-center">
+                        <h5>Văn học - Tiểu thuyết</h5>
+                        <button class="btn btn-dark mt-2">
+                            Xem thêm
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card cat-item shadow-sm">
+                    <img src="img/Nhom2.png">
+                    <div class="card-body text-center">
+                        <h5>Kinh tế - Khởi nghiệp</h5>
+                        <button class="btn btn-dark mt-2">
+                            Xem thêm
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card cat-item shadow-sm">
+                    <img src="img/Nhom3.png">
+                    <div class="card-body text-center">
+                        <h5>Tâm lý - Kỹ năng</h5>
+                        <button class="btn btn-dark mt-2">
+                            Xem thêm
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card cat-item shadow-sm">
+                    <img src="img/Nhom4.png">
+                    <div class="card-body text-center">
+                        <h5>Giáo dục - Giải trí</h5>
+                        <button class="btn btn-dark mt-2">
+                            Xem thêm
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- NEWS -->
+        <h2 class="text-center mt-5 mb-4"> TIN TỨC </h2>
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card shadow-sm news-item">
+                    <img src="img/Tintuc1.png">
+                    <div class="card-body">
+                        <h5>Top sách bán chạy 2026</h5>
+                        <p>
+                            Cập nhật nhanh những tựa sách hot nhất hiện nay.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm news-item">
+                    <img src="img/Tintuc2.png">
+                    <div class="card-body">
+                        <h5>Combo sách đồng giá</h5>
+                        <p>
+                            Nhiều combo sách ưu đãi cực hấp dẫn.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm news-item">
+                    <img src="img/Tintuc3.png">
+                    <div class="card-body">
+                        <h5>Giảm giá mùa hè</h5>
+                        <p>
+                            Chương trình Summer Sale giảm giá cực sốc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Left -->
+                <div class="col-lg-6 mb-4">
+                    <h3>Thông tin liên hệ</h3>
+                    <p>📍 Địa chỉ: 180 Cao Lỗ, Quận 8, TP.HCM</p>
+                    <p>📧 Email: DH52301391@student.stu.edu.vn</p>
+                    <p>📞 Điện thoại: 0932682245</p>
+                </div>
+                <!-- Right -->
+                <div class="col-lg-6">
+                    <iframe src="https://www.google.com/maps?q=TP.HCM&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

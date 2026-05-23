@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vidu-js</title>
+  </head>
+  <body>
+    <script>
+      // Dùng {}
+      let car1 = {
+        brand: "Toyota",
+        model: "Camry",
+        year: 2024,
+        drive: function () {
+          console.log("Xe đang chạy...");
+          run = "Xe đang chạy1!!";
+          document.write(run);
+        },
+      };
+      car1.drive(); // Chuổi xe đang chạy...
+
+      // Dùng Constructor new Object()
+      let car2 = new Object();
+      car2.brand = "Honda";
+      car2.model = "Civic";
+      car2.year = 2023;
+      car2.drive = function () {
+        // console.log("Xe đang chạy...");
+        run2 = "Xe đang chạy 2!";
+        document.write('<br>');
+        document.write(run2);
+      };
+
+      car2.drive(); // Xe đang chạy...
+      document.write("<br>" + car2.year + "<br>" + car2.brand);
+
+      // Dùng Object.create() với prototype(kế thừa)
+
+      let carProto = {
+        drive: function () {
+          console.log("Xe đang chạy...");
+          run3 = "Xe đang chạy 3!"
+          document.write(run3);
+        },
+      };
+
+      let car3 = Object.create(carProto);
+      car3.brand = "Mazda";
+      car3.model = "CX-5";
+      car3.year = 2022;
+      document.write("<br>");
+      car3.drive(); // Xe đang chạy...
+    
+    </script>
+  </body>
+</html>

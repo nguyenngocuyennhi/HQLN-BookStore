@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/SanPham.css">
+</head>
+<body>
+<div class="container py-5">
+    <!-- CHI TIẾT -->
+    <div class="detail-box">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <img src="./img/gt1.png" class="product-img">
+            </div>
+            <div class="col-lg-7">
+                <h1 class="product-title">Tin Học Đại Cương</h1><br>
+                <h3>📚 Tác giả: Trần Đình Khang (Chủ biên) cùng các cộng sự</h3>
+                <h3>🏷 Thể loại: Giáo trình Tin học - Cơ sở</h3>
+                <h3>💻 Nền tảng công nghệ thông tin</h3><br>
+                <div class="price-box">
+                    <span class="new-price">110.000đ</span>
+                </div>
+                <!-- SỐ LƯỢNG -->
+                <div class="quantity-box">
+                    <button class="quantity-btn" onclick="decreaseQty()">-</button>
+                    <input type="text" value="1" id="qty" class="quantity-input">
+                    <button class="quantity-btn" onclick="increaseQty()">+</button>
+                </div>
+                <!-- NÚT -->
+                <div class="button-group">
+                    <button class="cart-btn" onclick="addToCart('Tin Học Đại Cương',110000,'./img/gt1.png')">
+                        🛒 Thêm vào giỏ hàng
+                    </button>
+                    <button class="buy-btn" onclick="buyNow('Tin Học Đại Cương',110000,'./img/gt1.png')">
+                        ⚡ Mua ngay
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MÔ TẢ -->
+    <div class="desc-box">
+        <h3>📖 Mô tả sản phẩm</h3>
+        <p>
+            Giáo Trình Tin Học Đại Cương – tài liệu giảng dạy cơ bản về công nghệ thông tin được biên soạn bởi các giảng viên Đại học Bách Khoa Hà Nội nhằm trang bị cho sinh viên kiến thức nền tảng về tin học.
+        </p>
+        <p>
+            Nội dung sách bao gồm các khái niệm cơ bản về máy tính, hệ điều hành, mạng máy tính, cùng những kỹ năng ứng dụng tin học trong học tập và công việc. Đây là bước khởi đầu quan trọng để sinh viên tiếp cận các môn học chuyên sâu hơn.
+        </p>
+        <p>
+            Với cách trình bày rõ ràng, dễ hiểu và hệ thống, giáo trình giúp người học nắm vững kiến thức cơ sở tạo nền tảng vững chắc cho việc nghiên cứu và ứng dụng công nghệ thông tin trong nhiều lĩnh vực khác nhau.
+        </p>
+    </div>
+    <!-- ĐÁNH GIÁ -->
+    <div class="review-box">
+        <h3>⭐ Đánh giá sản phẩm</h3>
+        <div class="star-rating">
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+            <span>★</span>
+        </div>
+        <input type="file">
+        <textarea placeholder="Nhập bình luận của bạn..."></textarea>
+        <br>
+        <button class="send-review">Gửi bình luận</button>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="./js/SanPham.js"></script>
+
+</body>
+</html>

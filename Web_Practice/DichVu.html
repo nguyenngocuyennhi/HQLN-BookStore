@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<!-- HEADER -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+    <div class="container-fluid px-4">
+        <!-- Logo -->
+        <a class="navbar-brand logo" href="#">
+            <img src="./img/logo.png" alt="Logo">
+        </a>
+        <!-- Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- MENU -->
+        <div class="collapse navbar-collapse" id="menu">
+            <!-- Search -->
+            <form class="d-flex mx-auto w-50">
+                <input id="searchInput" class="form-control rounded-0 rounded-start" type="search"  placeholder="Tìm kiếm...">
+                <button class="btn btn-dark rounded-0 rounded-end">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            <!-- Right -->
+            <div class="d-flex align-items-center gap-3">
+                <a href="DangNhap.html" class="btn btn-primary">Đăng nhập</a>
+                <a href="GioHang.html" class="btn btn-warning">🛒 Giỏ hàng</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- BANNER -->
+<div class="service-banner">
+    <img src="./img/banner_sach.png">
+</div>
+<!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid px-4">
+            <ul class="navbar-nav w-100 justify-content-between align-items-center">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        ☰ Danh mục sản phẩm
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Tiểu thuyết / Văn học</a></li>
+                        <li><a class="dropdown-item" href="#">Kinh tế - Khởi nghiệp</a></li>
+                        <li><a class="dropdown-item" href="#">Tâm lý - Kỹ năng</a></li>
+                        <li><a class="dropdown-item" href="#">Thiếu nhi</a></li>
+                        <li><a class="dropdown-item" href="#">Giáo khoa – Giáo trình</a></li>
+                        <li><a class="dropdown-item" href="#">Manga - Truyện tranh</a></li>
+                        <li><a class="dropdown-item" href="#">Ngoại ngữ</a></li>
+                        <li><a class="dropdown-item" href="#">Trinh thám</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="CuaHang.html">Cửa hàng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="DichVu.html">Dịch vụ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ThongTin.html">Thông tin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="LienHe.html">Liên hệ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="LabThucHanh.html">Lab Thực Hành</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<!-- SERVICES -->
+<div class="container py-5">
+    <h2 class="text-center fw-bold mb-5">
+        DỊCH VỤ NỔI BẬT
+    </h2>
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card text-center h-100">
+                <div class="service-icon">🚚</div>
+                <h4>Giao hàng nhanh</h4>
+                <p>Hỗ trợ giao hàng toàn quốc nhanh chóng và an toàn.</p>
+                <a href="DichVu1.html">
+                    <button class="btn btn-dark rounded-pill px-4">Xem thêm</button>
+                </a>
+            </div>
+        </div>
+        <!-- CARD -->
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card text-center h-100">
+                <div class="service-icon">💳</div>
+                <h4>Thanh toán đa dạng</h4>
+                <p>Thanh toán khi nhận hàng hoặc qua ví điện tử, ngân hàng, QR Code</p>
+                <a href="DichVu2.html">
+                    <button class="btn btn-dark rounded-pill px-4">Xem thêm</button>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card text-center h-100">
+                <div class="service-icon">🎁</div>
+                <h4>Gói quà miễn phí</h4>
+                <p>Hỗ trợ gói quà đẹp mắt dành cho bạn bè và người thân.</p>
+                <a href="DichVu3.html">
+                    <button class="btn btn-dark rounded-pill px-4">Xem thêm</button>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card text-center h-100">
+                <div class="service-icon">📚</div>
+                <h4>Sách mới mỗi tuần</h4>
+                <p>Liên tục cập nhật nhiều đầu sách hot và mới nhất.</p>
+                <a href="DichVu4.html">
+                    <button class="btn btn-dark rounded-pill px-4">Xem thêm</button>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card text-center h-100">
+                <div class="service-icon">⭐</div>
+                <h4>Khách hàng VIP</h4>
+                <p>Nhận ưu đãi giảm giá và quà tặng dành riêng cho VIP.</p>
+                <a href="DichVu5.html">
+                    <button class="btn btn-dark rounded-pill px-4">Xem thêm</button>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="service-card text-center h-100">
+                <div class="service-icon">☎</div>
+                <h4>Hỗ trợ từ 7h00 - 23h00</h4>
+                <p>Đội ngũ tư vấn luôn sẵn sàng hỗ trợ khách hàng mọi lúc.</p>
+                <a href="DichVu6.html">
+                    <button class="btn btn-dark rounded-pill px-4">Xem thêm</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- PRICING -->
+<div class="container py-5">
+    <h2 class="text-center fw-bold mb-5"> BẢNG GIÁ DỊCH VỤ  </h2>
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+            <div class="card pricing-card h-100 text-center">
+                <div class="card-header bg-dark text-white py-4">
+                    <h3>🌱 Gói Tiết Kiệm</h3>
+                </div>
+                <div class="card-body">
+                    <h2 class="text-danger mb-3">100.000đ</h2>
+                    <p>✔ Giao hàng tiêu chuẩn, an toàn</p>
+                    <p>✔ Hỗ trợ nhanh trong khung giờ 8/24</p>
+                    <p>✔ Ưu đãi dành riêng cho thành viên</p>
+                </div>
+                <div class="card-footer bg-white border-0 pb-4">
+                    <button class="btn btn-dark px-4" data-bs-toggle="modal" data-bs-target="#serviceModal">
+                        Chọn dịch vụ
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card pricing-card h-100 text-center">
+                <div class="card-header bg-warning py-4">
+                    <h3>⚡ Gói Nâng Cao</h3>
+                </div>
+                <div class="card-body">
+                    <h2 class="text-danger mb-3">200.000đ</h2>
+                    <p>✔ Giao hàng nhanh, ưu tiên tốc độ</p>
+                    <p>✔ Tặng kèm gói quà miễn phí</p>
+                    <p>✔ Hỗ trợ ưu tiên, phản hồi nhanh hơn</p>
+                </div>
+                <div class="card-footer bg-white border-0 pb-4">
+                    <button class="btn btn-warning px-4" data-bs-toggle="modal" data-bs-target="#serviceModal">
+                        Chọn dịch vụ
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="card pricing-card h-100 text-center">
+                <div class="card-header bg-primary text-white py-4">
+                    <h3>👑 Gói VIP</h3>
+                </div>
+                <div class="card-body">
+                    <h2 class="text-danger mb-3"> 400.000đ</h2>
+                    <p>✔ Freeship toàn quốc không giới hạn</p>
+                    <p>✔ Giảm giá độc quyền cho thành viên VIP</p>
+                    <p>✔ Hỗ trợ 24/7 luôn có mặt khi bạn cần</p>
+                </div>
+                <div class="card-footer bg-white border-0 pb-4">
+                    <button class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#serviceModal">
+                        Chọn dịch vụ
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL -->
+<div class="modal fade" id="serviceModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- HEADER -->
+            <div class="modal-header">
+                <h4 class="modal-title">Đăng ký dịch vụ</h4>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- BODY -->
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Họ tên</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Số điện thoại</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Chọn dịch vụ</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">Giao hàng nhanh</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">Gói quà miễn phí
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="form-check-label">Thành viên VIP</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Yêu cầu khác </label>
+                        <textarea class="form-control" rows="4"></textarea>
+                    </div>
+                </form>
+            </div>
+            <!-- FOOTER -->
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+                <button class="btn btn-success">
+                    Gửi thông tin
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- PROCESS -->
+<div class="container pb-5">
+    <h2 class="text-center fw-bold mb-5">
+        QUY TRÌNH MUA HÀNG
+    </h2>
+    <div class="process-box">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="step">
+                    <div class="step-number"> 1 </div>
+                    <h5>Chọn sách</h5>
+                    <p>Tìm kiếm và lựa chọn sách yêu thích.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="step">
+                    <div class="step-number"> 2 </div>
+                    <h5>Thêm giỏ hàng</h5>
+                    <p>Chọn số lượng và thêm sản phẩm vào giỏ.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="step">
+                    <div class="step-number"> 3 </div>
+                    <h5>Thanh toán</h5>
+                    <p>Điền thông tin và chọn hình thức thanh toán.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="step">
+                    <div class="step-number"> 4 </div>
+                    <h5>Nhận hàng</h5>
+                    <p>Đơn hàng sẽ được giao tận nơi nhanh chóng.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MEMBER -->
+<div class="container pb-5">
+    <div class="member-box text-center">
+        <h2 class="fw-bold mb-3">Thành viên VIP HQLN BookStore</h2>
+        <p class="mb-4">Đăng ký thành viên để nhận ưu đãi hấp dẫn mỗi tháng.</p>
+        <button class="btn btn-warning btn-lg px-5">
+            Đăng ký ngay
+        </button>
+    </div>
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4">
+                <h3>Thông tin liên hệ</h3>
+                <p>📍 180 Cao Lỗ, Quận 8, TP.HCM</p>
+                <p>📧 DH52301391@student.stu.edu.vn</p>
+                <p>📞 0932682245</p>
+            </div>
+            <div class="col-lg-6">
+                <iframe src="https://www.google.com/maps?q=TP.HCM&output=embed"></iframe>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
